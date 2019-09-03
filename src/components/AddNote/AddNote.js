@@ -26,6 +26,7 @@ export default class AddNote extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.handleSubmit(this.state.title, this.state.body);
+    this.setState({ title: '', body: '' });
   }
 
   render() {
